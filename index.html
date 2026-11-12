@@ -134,14 +134,24 @@ nav {
   border-color:var(--gold);
 }
 
-/* HERO */
+/* HERO - CINEMATIC UNIVERSITY BUILDING */
 
 .hero {
-  /* Cinematic Annamalai University Administrative Building photograph */
   background:
-    linear-gradient(90deg,rgba(7,35,25,.91) 0%,rgba(8,39,28,.78) 43%,rgba(8,35,25,.43) 100%),
-    linear-gradient(0deg,rgba(7,30,22,.34),rgba(7,30,22,.08)),
-    url("images/annamalai-university-admin-building.png") center 43% / cover no-repeat;
+    linear-gradient(
+      90deg,
+      rgba(7,35,25,.91) 0%,
+      rgba(8,39,28,.78) 43%,
+      rgba(8,35,25,.43) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(7,30,22,.34),
+      rgba(7,30,22,.08)
+    ),
+    url("images/annamalai-university-admin-building.png")
+    center 43% / cover no-repeat;
+
   color:white;
   padding:76px 0 84px;
   position:relative;
@@ -164,8 +174,9 @@ nav {
   top:-190px;
   border:1px solid rgba(200,167,94,.25);
   border-radius:50%;
-  box-shadow:0 0 0 55px rgba(200,167,94,.035),
-             0 0 0 110px rgba(200,167,94,.025);
+  box-shadow:
+    0 0 0 55px rgba(200,167,94,.035),
+    0 0 0 110px rgba(200,167,94,.025);
 }
 
 .eyebrow {
@@ -478,7 +489,10 @@ footer p,footer a {
   .hero-search input { padding:14px 10px; }
   .search-button { padding:14px; }
   section { padding:45px 0; }
-  .section-heading { align-items:start; flex-direction:column; }
+  .section-heading {
+    align-items:start;
+    flex-direction:column;
+  }
   .section-heading h2 { font-size:27px; }
   .categories { grid-template-columns:repeat(2,1fr); }
   .resource-grid,.info-grid,.footer-grid {

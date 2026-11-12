@@ -1,0 +1,874 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#103b2d">
+<meta name="description" content="Annamalai University Agronomy Library - Digital Knowledge Resource Centre. Discover books, theses, journals and agricultural research resources.">
+
+<title>Agronomy Library | Annamalai University</title>
+
+<style>
+:root {
+  --green:#103b2d;
+  --green2:#174b39;
+  --green3:#216448;
+  --gold:#c8a75e;
+  --goldlight:#e5d39c;
+  --cream:#f7f5ed;
+  --white:#ffffff;
+  --ink:#20342c;
+  --muted:#718078;
+  --border:#e5e9e1;
+  --shadow:0 12px 35px rgba(17,52,39,.08);
+}
+
+* { box-sizing:border-box; }
+
+html { scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#fafbf8;
+  color:var(--ink);
+}
+
+a { color:inherit; text-decoration:none; }
+
+button,input { font:inherit; }
+
+.container {
+  width:min(1160px,92%);
+  margin:auto;
+}
+
+/* HEADER */
+
+header {
+  background:var(--green);
+  color:white;
+  border-bottom:1px solid rgba(255,255,255,.13);
+}
+
+.header-inner {
+  min-height:88px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand {
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.logo {
+  width:53px;
+  height:53px;
+  border:1px solid var(--gold);
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  color:var(--goldlight);
+  font-size:21px;
+  font-weight:bold;
+}
+
+.brand-name {
+  font-size:14px;
+  letter-spacing:1.4px;
+  font-weight:bold;
+}
+
+.brand-sub {
+  margin-top:5px;
+  font-size:10px;
+  color:#cbd9ce;
+  letter-spacing:1.5px;
+}
+
+.header-links {
+  display:flex;
+  align-items:center;
+  gap:20px;
+  font-size:13px;
+}
+
+.header-links a:hover { color:var(--goldlight); }
+
+.admin-link {
+  padding:11px 17px;
+  border:1px solid var(--gold);
+  color:var(--goldlight);
+  border-radius:7px;
+}
+
+/* NAVIGATION */
+
+nav {
+  background:#174331;
+  color:white;
+}
+
+.nav-inner {
+  display:flex;
+  align-items:center;
+  gap:28px;
+  min-height:49px;
+  overflow-x:auto;
+  white-space:nowrap;
+  font-size:13px;
+}
+
+.nav-inner a {
+  padding:15px 0;
+  border-bottom:2px solid transparent;
+}
+
+.nav-inner a:hover {
+  color:var(--goldlight);
+  border-color:var(--gold);
+}
+
+/* HERO */
+
+.hero {
+  /* Cinematic Annamalai University Administrative Building photograph */
+  background:
+    linear-gradient(90deg,rgba(7,35,25,.91) 0%,rgba(8,39,28,.78) 43%,rgba(8,35,25,.43) 100%),
+    linear-gradient(0deg,rgba(7,30,22,.34),rgba(7,30,22,.08)),
+    url("images/annamalai-university-admin-building.png") center 43% / cover no-repeat;
+  color:white;
+  padding:76px 0 84px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero > .container {
+  position:relative;
+  z-index:1;
+}
+
+.hero:after {
+  content:"";
+  z-index:0;
+  pointer-events:none;
+  position:absolute;
+  width:440px;
+  height:440px;
+  right:-120px;
+  top:-190px;
+  border:1px solid rgba(200,167,94,.25);
+  border-radius:50%;
+  box-shadow:0 0 0 55px rgba(200,167,94,.035),
+             0 0 0 110px rgba(200,167,94,.025);
+}
+
+.eyebrow {
+  color:var(--goldlight);
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+}
+
+.hero h1 {
+  font-family:Georgia,serif;
+  font-size:clamp(36px,5vw,59px);
+  line-height:1.12;
+  font-weight:normal;
+  max-width:760px;
+  margin:22px 0 16px;
+}
+
+.hero h1 span { color:var(--goldlight); }
+
+.hero-description {
+  color:#d3dfd6;
+  line-height:1.8;
+  max-width:650px;
+  font-size:15px;
+}
+
+.hero-search {
+  display:flex;
+  max-width:750px;
+  background:white;
+  padding:7px;
+  border-radius:10px;
+  margin-top:31px;
+  position:relative;
+  z-index:1;
+}
+
+.hero-search input {
+  flex:1;
+  min-width:0;
+  border:0;
+  outline:none;
+  padding:13px;
+  color:var(--ink);
+  font-size:14px;
+}
+
+.search-button {
+  background:var(--green);
+  color:white;
+  border:0;
+  padding:0 25px;
+  border-radius:7px;
+  cursor:pointer;
+}
+
+.search-button:hover { background:var(--green3); }
+
+.search-hint {
+  color:#c8d7cc;
+  font-size:12px;
+  margin-top:13px;
+}
+
+/* SECTIONS */
+
+section { padding:64px 0; }
+
+.section-heading {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin-bottom:26px;
+}
+
+.section-heading h2 {
+  font-family:Georgia,serif;
+  font-size:31px;
+  font-weight:normal;
+  margin:9px 0 0;
+  color:var(--green);
+}
+
+.section-heading p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.6;
+}
+
+.gold-label {
+  color:#997a36;
+  font-size:10px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+/* CATEGORIES */
+
+.categories {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+}
+
+.category {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:22px 15px;
+  text-align:center;
+  transition:.2s;
+  cursor:pointer;
+}
+
+.category:hover {
+  transform:translateY(-4px);
+  border-color:var(--gold);
+  box-shadow:var(--shadow);
+}
+
+.category-icon {
+  width:48px;
+  height:48px;
+  border-radius:12px;
+  display:grid;
+  place-items:center;
+  background:#edf3ec;
+  color:var(--green);
+  font-size:23px;
+  margin:0 auto 14px;
+}
+
+.category h3 {
+  font-size:13px;
+  margin:0 0 7px;
+}
+
+.category p {
+  color:var(--muted);
+  font-size:11px;
+  margin:0;
+}
+
+/* COLLECTION */
+
+.collection-section { background:#f0f3ed; }
+
+.filter-bar {
+  display:flex;
+  gap:9px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
+}
+
+.filter {
+  padding:9px 15px;
+  border:1px solid #dce4da;
+  background:white;
+  color:var(--green);
+  border-radius:30px;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.filter.active,
+.filter:hover {
+  background:var(--green);
+  color:white;
+  border-color:var(--green);
+}
+
+.resource-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:19px;
+}
+
+.resource-card {
+  background:white;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:23px;
+  transition:.2s;
+}
+
+.resource-card:hover {
+  transform:translateY(-3px);
+  box-shadow:var(--shadow);
+}
+
+.resource-type {
+  font-size:10px;
+  color:#947637;
+  letter-spacing:1px;
+  font-weight:bold;
+  text-transform:uppercase;
+}
+
+.resource-card h3 {
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:19px;
+  line-height:1.4;
+  margin:15px 0 9px;
+}
+
+.resource-card p {
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.7;
+}
+
+.resource-meta {
+  border-top:1px solid var(--border);
+  padding-top:13px;
+  margin-top:16px;
+  color:#63736a;
+  font-size:11px;
+}
+
+.empty-message {
+  padding:35px;
+  text-align:center;
+  color:var(--muted);
+  grid-column:1/-1;
+}
+
+/* INFORMATION */
+
+.info-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+}
+
+.info-card {
+  padding:28px;
+  border-radius:13px;
+  background:white;
+  border:1px solid var(--border);
+}
+
+.info-card h3 {
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:22px;
+}
+
+.info-card p {
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.8;
+}
+
+/* FOOTER */
+
+footer {
+  background:#0c2e22;
+  color:white;
+  padding:43px 0 25px;
+}
+
+.footer-grid {
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:35px;
+}
+
+footer h3 {
+  font-family:Georgia,serif;
+  font-weight:normal;
+  color:var(--goldlight);
+}
+
+footer p,footer a {
+  color:#c2d1c6;
+  font-size:12px;
+  line-height:1.9;
+}
+
+.footer-bottom {
+  border-top:1px solid rgba(255,255,255,.13);
+  margin-top:32px;
+  padding-top:19px;
+  text-align:center;
+  color:#aebfb2;
+  font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:850px) {
+  .categories { grid-template-columns:repeat(3,1fr); }
+  .resource-grid { grid-template-columns:repeat(2,1fr); }
+  .header-links { gap:10px; }
+}
+
+@media(max-width:580px) {
+  .header-inner { min-height:75px; }
+  .brand-name { font-size:11px; }
+  .brand-sub { font-size:8px; }
+  .logo { width:43px;height:43px; }
+  .header-links a:not(.admin-link) { display:none; }
+  .hero { padding:55px 0 62px; }
+  .hero-search { flex-direction:column; gap:5px; }
+  .hero-search input { padding:14px 10px; }
+  .search-button { padding:14px; }
+  section { padding:45px 0; }
+  .section-heading { align-items:start; flex-direction:column; }
+  .section-heading h2 { font-size:27px; }
+  .categories { grid-template-columns:repeat(2,1fr); }
+  .resource-grid,.info-grid,.footer-grid {
+    grid-template-columns:1fr;
+  }
+  .nav-inner { gap:21px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container header-inner">
+
+    <a class="brand" href="#">
+      <div class="logo">AU</div>
+      <div>
+        <div class="brand-name">ANNAMALAI UNIVERSITY</div>
+        <div class="brand-sub">DEPARTMENT OF AGRONOMY</div>
+      </div>
+    </a>
+
+    <div class="header-links">
+      <a href="#about">About Library</a>
+      <a href="#collections">Collections</a>
+      <a class="admin-link" href="admin/login.html">
+        Administrator Login
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<nav>
+  <div class="container nav-inner">
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#collections">All Resources</a>
+    <a href="#collections">Books</a>
+    <a href="#collections">M.Sc. Theses</a>
+    <a href="#collections">Ph.D. Theses</a>
+    <a href="#about">About</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+
+    <div class="eyebrow">
+      Digital Knowledge Resource Centre
+    </div>
+
+    <h1>
+      Discover Knowledge.<br>
+      <span>Advance Agriculture.</span>
+    </h1>
+
+    <p class="hero-description">
+      Welcome to the Annamalai University Agronomy Library.
+      Explore academic books, postgraduate and doctoral theses,
+      journals, research papers and other agricultural knowledge
+      resources in one digital destination.
+    </p>
+
+    <form class="hero-search" id="searchForm">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search by title, author, subject or keyword..."
+        aria-label="Search library resources"
+      >
+      <button class="search-button" type="submit">
+        Search Library
+      </button>
+    </form>
+
+    <div class="search-hint">
+      Explore academic knowledge from the Department of Agronomy.
+    </div>
+
+  </div>
+</section>
+
+<section id="categories">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <div class="gold-label">Explore the collection</div>
+        <h2>Library Categories</h2>
+      </div>
+      <p>Discover resources by academic category.</p>
+    </div>
+
+    <div class="categories">
+
+      <div class="category" data-category="Books">
+        <div class="category-icon">📚</div>
+        <h3>Books</h3>
+        <p>Textbooks and references</p>
+      </div>
+
+      <div class="category" data-category="M.Sc. Theses">
+        <div class="category-icon">🎓</div>
+        <h3>M.Sc. Theses</h3>
+        <p>Postgraduate research</p>
+      </div>
+
+      <div class="category" data-category="Ph.D. Theses">
+        <div class="category-icon">🏅</div>
+        <h3>Ph.D. Theses</h3>
+        <p>Doctoral research</p>
+      </div>
+
+      <div class="category" data-category="Journals">
+        <div class="category-icon">📖</div>
+        <h3>Journals</h3>
+        <p>Academic publications</p>
+      </div>
+
+      <div class="category" data-category="Research Papers">
+        <div class="category-icon">🔬</div>
+        <h3>Research Papers</h3>
+        <p>Scientific literature</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="collection-section" id="collections">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <div class="gold-label">Academic repository</div>
+        <h2>Explore Resources</h2>
+      </div>
+      <p id="resultCount">Demonstration catalogue</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter active" data-filter="All">All</button>
+      <button class="filter" data-filter="Books">Books</button>
+      <button class="filter" data-filter="M.Sc. Theses">M.Sc. Theses</button>
+      <button class="filter" data-filter="Ph.D. Theses">Ph.D. Theses</button>
+      <button class="filter" data-filter="Journals">Journals</button>
+      <button class="filter" data-filter="Research Papers">Research Papers</button>
+    </div>
+
+    <div class="resource-grid" id="resourceGrid">
+
+      <div class="resource-card"
+        data-category="Books"
+        data-search="principles agronomy crop production agriculture textbook">
+        <div class="resource-type">Book · Demonstration</div>
+        <h3>Principles of Agronomy</h3>
+        <p>Illustrative catalogue entry for an agricultural textbook.</p>
+        <div class="resource-meta">Category: General Agronomy</div>
+      </div>
+
+      <div class="resource-card"
+        data-category="M.Sc. Theses"
+        data-search="rice nutrient management msc thesis">
+        <div class="resource-type">M.Sc. Thesis · Demonstration</div>
+        <h3>Nutrient Management in Rice</h3>
+        <p>Illustrative postgraduate thesis catalogue entry.</p>
+        <div class="resource-meta">Subject: Nutrient Management</div>
+      </div>
+
+      <div class="resource-card"
+        data-category="Ph.D. Theses"
+        data-search="weed management rice phd thesis">
+        <div class="resource-type">Ph.D. Thesis · Demonstration</div>
+        <h3>Weed Management in Rice</h3>
+        <p>Illustrative doctoral research catalogue entry.</p>
+        <div class="resource-meta">Subject: Weed Science</div>
+      </div>
+
+      <div class="resource-card"
+        data-category="Journals"
+        data-search="agronomy journal scientific publication">
+        <div class="resource-type">Journal · Demonstration</div>
+        <h3>Agricultural Research Journal</h3>
+        <p>Illustrative journal catalogue entry.</p>
+        <div class="resource-meta">Category: Scientific Literature</div>
+      </div>
+
+      <div class="resource-card"
+        data-category="Research Papers"
+        data-search="integrated farming research paper">
+        <div class="resource-type">Research Paper · Demonstration</div>
+        <h3>Integrated Farming Systems</h3>
+        <p>Illustrative research paper catalogue entry.</p>
+        <div class="resource-meta">Subject: Sustainable Agriculture</div>
+      </div>
+
+      <div class="resource-card"
+        data-category="Books"
+        data-search="soil science soil fertility reference book">
+        <div class="resource-type">Book · Demonstration</div>
+        <h3>Fundamentals of Soil Science</h3>
+        <p>Illustrative reference book catalogue entry.</p>
+        <div class="resource-meta">Subject: Soil Science</div>
+      </div>
+
+    </div>
+
+    <p style="font-size:11px;color:#718078;margin-top:24px;">
+      Note: All entries displayed here are sample demonstrations.
+      They are not verified records of the university library.
+      Actual resources will be added after catalogue verification.
+    </p>
+
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-heading">
+      <div>
+        <div class="gold-label">Our digital initiative</div>
+        <h2>About the Library</h2>
+      </div>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <h3>Academic Knowledge Repository</h3>
+        <p>
+          The proposed Agronomy Library is designed to organise
+          academic books, postgraduate and doctoral theses,
+          journals, research papers and other scholarly materials
+          related to agricultural sciences.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <h3>Knowledge Accessibility</h3>
+        <p>
+          The platform aims to improve the discovery and accessibility
+          of authorised academic resources for students, researchers,
+          faculty members and the wider agricultural community.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div>
+        <h3>Annamalai University Agronomy Library</h3>
+        <p>
+          Digital Knowledge Resource Centre<br>
+          Department of Agronomy<br>
+          Faculty of Agriculture<br>
+          Annamalai University<br>
+          Annamalai Nagar, Chidambaram, Tamil Nadu, India.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <p>
+          <a href="#categories">Categories</a><br>
+          <a href="#collections">Resources</a><br>
+          <a href="#about">About Library</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Administration</h3>
+        <p>
+          <a href="admin/login.html">Administrator Login</a><br>
+          Resource management<br>
+          Library administration
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      Annamalai University · Department of Agronomy
+      <br>
+      Digital library initiative · Institutional approval and
+      resource publication policies apply.
+    </div>
+
+  </div>
+</footer>
+
+<script>
+const cards = [...document.querySelectorAll(".resource-card")];
+const filters = [...document.querySelectorAll(".filter")];
+const searchInput = document.getElementById("searchInput");
+const resultCount = document.getElementById("resultCount");
+
+let activeCategory = "All";
+let searchTerm = "";
+
+function updateCatalogue() {
+  let visible = 0;
+
+  cards.forEach(card => {
+    const category = card.dataset.category;
+    const content = (
+      card.dataset.search + " " + card.innerText
+    ).toLowerCase();
+
+    const categoryMatch =
+      activeCategory === "All" || category === activeCategory;
+
+    const searchMatch =
+      !searchTerm || content.includes(searchTerm);
+
+    const show = categoryMatch && searchMatch;
+
+    card.style.display = show ? "" : "none";
+
+    if (show) visible++;
+  });
+
+  resultCount.textContent =
+    visible + " demonstration records shown";
+}
+
+filters.forEach(button => {
+  button.addEventListener("click", () => {
+    activeCategory = button.dataset.filter;
+
+    filters.forEach(item =>
+      item.classList.toggle("active", item === button)
+    );
+
+    updateCatalogue();
+    document.getElementById("collections").scrollIntoView({
+      behavior:"smooth"
+    });
+  });
+});
+
+document.getElementById("searchForm")
+.addEventListener("submit", event => {
+  event.preventDefault();
+
+  searchTerm = searchInput.value.trim().toLowerCase();
+
+  updateCatalogue();
+
+  document.getElementById("collections").scrollIntoView({
+    behavior:"smooth"
+  });
+});
+
+document.querySelectorAll(".category").forEach(item => {
+  item.addEventListener("click", () => {
+    activeCategory = item.dataset.category;
+
+    filters.forEach(button => {
+      button.classList.toggle(
+        "active",
+        button.dataset.filter === activeCategory
+      );
+    });
+
+    searchTerm = "";
+    searchInput.value = "";
+
+    updateCatalogue();
+
+    document.getElementById("collections").scrollIntoView({
+      behavior:"smooth"
+    });
+  });
+});
+
+updateCatalogue();
+</script>
+
+</body>
+</html>
